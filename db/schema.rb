@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201126133056) do
+ActiveRecord::Schema.define(version: 20201126143024) do
+
+  create_table "question_accesses", force: :cascade do |t|
+    t.datetime "date"
+    t.integer "times_accessed"
+    t.integer "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_question_accesses_on_question_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "statement"
+    t.text "text"
+    t.string "answer"
+    t.integer "daily_access"
+    t.string "discipline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,8 +39,6 @@ ActiveRecord::Schema.define(version: 20201126133056) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "authentication_token", limit: 30
-    t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
