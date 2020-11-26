@@ -40,6 +40,7 @@ Dentro do terminal, realizar os seguintes comandos:
 
 ##### 3.3	Execução da API
 
-As duas ferramentas mais utilizadas para testes de APIs são Postman e Insomnia. Para a execução por essas ferramentas, basta colocar os endpoints (vide item 1) implementados. Também é necessário colocar no header o token do usuário (gerado automaticamente no item 3.2). Segue abaixo uma imagem ilustrativa:
+As duas ferramentas mais utilizadas para testes de APIs são Postman e Insomnia. Para a execução por essas ferramentas, basta colocar os endpoints (vide item 1) implementados. Também é necessário colocar no header o token do usuário (gerado automaticamente no item 3.2). O header deverá ter esses dois parâmetros:
 
-<URL:IMAGEM>
+* label: X-User-Email        value: (email informado no item 3.2)
+* label: X-User-Token        value: (token gerado no cadastro do usuário - item 3.2)
