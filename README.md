@@ -6,8 +6,10 @@ A documentação tem como objetivo informar de forma breve a arquitetura, as fer
 
 O padrão utilizado para o serviço (web api) será o MVC. Este padrão é constituído por três principais camadas, são elas: Model, View, Controller. Ao contrário de uma aplicação end-to-end, ou seja, de ponta a ponta onde na mesma implementação integra-se a comunicação com o banco de dados, regra de negócio e tela (camada View), numa API a camada Controller será representada pelos endpoints (urls que invocam os métodos do serviço). A camada View exibirá a documentação para orientar o usuário como acessar os dados, utilizando os endereços.  Abaixo seguem os endpoints utilizados para a api:
 
-* localhost:3000/api/v1/hot_questions
-* <endpoint - mais acessadas por período>
+* localhost:3000/api/v1/disciplinas_top_da_semana
+* localhost:3000/api/v1/questoes_top_da_semana
+* localhost:3000/api/v1/questoes_top_do_mes
+* localhost:3000/api/v1/questoes_top_do_ano
 
 ### 2. Ferramentas e tecnologias utilizadas
 
@@ -31,16 +33,15 @@ Com objetivo da criação do banco (no caso sqlite3), executar o comando abaixo:
 
 * _> rails db:migrate
 
-##### 3.2	Criação do usuário para API (autenticação)
+##### 3.2	Criação do usuário para API (autenticação). Popular dados do json, no SQLite3
 
 Dentro do terminal, realizar os seguintes comandos:
 
-* _> rails c
-* irb(main):> User.create(email: 'qualquer@email.com', password: 'qualquersenha')
+* _> rails db:seed
 
 ##### 3.3	Execução da API
 
 As duas ferramentas mais utilizadas para testes de APIs são Postman e Insomnia. Para a execução por essas ferramentas, basta colocar os endpoints (vide item 1) implementados. Também é necessário colocar no header o token do usuário (gerado automaticamente no item 3.2). O header deverá ter esses dois parâmetros:
 
 * label: X-User-Email        value: (email informado no item 3.2)
-* label: X-User-Token        value: (token gerado no cadastro do usuário - item 3.2)
+* label: X-User-Token        value: (token gerado no cadastro do usuário - item 3.2 - vide arquivo seeds.rb)

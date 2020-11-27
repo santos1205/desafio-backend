@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2020-11-26 11:29:10
+  question_id: 1
+  date: 2020-11-27 16:44:00
   times_accessed: 1
-  question: one
 
 two:
-  date: 2020-11-26 11:29:10
+  question_id: 1
+  date: 2020-11-27 16:44:00
   times_accessed: 1
-  question: two
