@@ -18,7 +18,8 @@ Afim de implementar e entregar a solução de forma objetiva e produtiva, foram 
 | Ferramenta | Descrição |
 |:----:|:---------:|
 | VS Code | Editor de Texto |
-| Ruby on Rails | Framework para desenvolvimento web |
+| Ruby 2.3.3 | Linguagem de programação utilizada no Framework. Download: http://railsinstaller.org/pt-BR |
+| Ruby on Rails v. 5.1.7 | Framework para desenvolvimento web. Download: http://railsinstaller.org/pt-BR |
 | Git | Ferramenta para versionamento |
 | GitHub | Local de hospedagem do repositório do projeto |
 | Insomnia | Ferramenta de teste para web api (substituto do Postman) |
@@ -27,7 +28,11 @@ Afim de implementar e entregar a solução de forma objetiva e produtiva, foram 
 
 Seguem aqui algumas orientações para a inicalização, bem como o bom funcionamento da api:
 
-##### 3.1	Comandos iniciais para criação do banco e entidades
+##### 3.1	Comandos iniciais para carregamento das dependências, criação do banco e entidades
+
+Com objetivo da instalação das dependências do gemfile, executar o comando abaixo:
+
+* _> bundle install
 
 Com objetivo da criação do banco (no caso sqlite3), executar o comando abaixo:
 
@@ -35,7 +40,7 @@ Com objetivo da criação do banco (no caso sqlite3), executar o comando abaixo:
 
 ##### 3.2	Criação do usuário para API (autenticação). Popular dados do json, no SQLite3
 
-Dentro do terminal, realizar os seguintes comandos:
+Dentro do terminal, realizar os seguintes comandos (levará alguns minutos):
 
 * _> rails db:seed
 
