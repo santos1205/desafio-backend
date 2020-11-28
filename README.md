@@ -49,4 +49,4 @@ Dentro do terminal, realizar os seguintes comandos (levará alguns minutos):
 As duas ferramentas mais utilizadas para testes de APIs são Postman e Insomnia. Para a execução por essas ferramentas, basta colocar os endpoints (vide item 1) implementados. Também é necessário colocar no header o token do usuário (gerado automaticamente no item 3.2). O header deverá ter esses dois parâmetros:
 
 * label: X-User-Email        value: (email informado no item 3.2)
-* label: X-User-Token        value: (token gerado no cadastro do usuário - item 3.2 - vide arquivo seeds.rb)
+* label: X-User-Token        value: (token gerado no cadastro do usuário. No console do Rails, executar o comando: User.all em seguinda verificar o token)
