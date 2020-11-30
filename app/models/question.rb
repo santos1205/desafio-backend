@@ -1,3 +1,3 @@
 class Question < ApplicationRecord
-    has_many :question_access
+    has_many :question_accesses
 end
