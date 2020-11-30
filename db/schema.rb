@@ -10,9 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201128171821) do
+ActiveRecord::Schema.define(version: 20201129231005) do
 
   create_table "question_accesses", force: :cascade do |t|
+    t.datetime "date"
+    t.integer "times_accessed"
+    t.integer "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_question_accesses_on_question_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "statement"
+    t.text "text"
+    t.string "answer"
+    t.integer "daily_access"
+    t.string "discipline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "t_question_accesses", force: :cascade do |t|
     t.integer "question_id"
     t.datetime "date"
     t.integer "times_accessed"
@@ -20,7 +39,7 @@ ActiveRecord::Schema.define(version: 20201128171821) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "questions", force: :cascade do |t|
+  create_table "t_questions", force: :cascade do |t|
     t.integer "question_id"
     t.string "statement"
     t.text "text"

@@ -1,0 +1,2 @@
+class TQuestion < ApplicationRecord
+end

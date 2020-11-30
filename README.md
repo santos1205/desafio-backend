@@ -55,6 +55,6 @@ As duas ferramentas mais utilizadas para testes de APIs são Postman e Insomnia.
 * label: X-User-Email        value: (email informado no item 3.2. No console do Rails, executar o comando: User.all em seguinda verificar o token)
 * label: X-User-Token        value: (token gerado no cadastro do usuário. No console do Rails, executar o comando: User.all em seguinda verificar o token)
 
-##### Considerações
+##### Considerações importantes
 
 Foram detectadas id's duplicados no arquivo 'questions.json'. Os id's duplicados encontram-se no arquivo 'duplicidade_questions.txt'. Neste cenário de id's duplicados, seria impossível realizar um relacionamento (association) entre as entidades 'questions' e 'question_access'. Para solucionar o problema, removi os id's duplicados do arquivo 'questions.json', para conseguir inserir na base e relaciona-los com os acesso (question_access).

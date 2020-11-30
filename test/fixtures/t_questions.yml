@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question_id: 1
+  statement: MyString
+  text: MyText
+  answer: MyString
+  daily_access: 1
+  discipline: MyString
+
+two:
+  question_id: 1
+  statement: MyString
+  text: MyText
+  answer: MyString
+  daily_access: 1
+  discipline: MyString
