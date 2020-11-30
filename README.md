@@ -6,10 +6,10 @@ A documentação tem como objetivo informar de forma breve a arquitetura, as fer
 
 O padrão utilizado para o serviço (web api) será o MVC. Este padrão é constituído por três principais camadas, são elas: Model, View, Controller. Ao contrário de uma aplicação end-to-end, ou seja, de ponta a ponta onde na mesma implementação integra-se a comunicação com o banco de dados, regra de negócio e tela (camada View), numa API a camada Controller será representada pelos endpoints (urls que invocam os métodos do serviço). A camada View exibirá a documentação para orientar o usuário como acessar os dados, utilizando os endereços.  Abaixo seguem os endpoints utilizados para a api:
 
-* localhost:3000/api/v1/disciplinas_top_da_semana.json
-* localhost:3000/api/v1/questoes_top_da_semana.json
-* localhost:3000/api/v1/questoes_top_do_mes.json
-* localhost:3000/api/v1/questoes_top_do_ano.json
+* localhost:3000/api/v1/top_disciplinas_dia.json
+* localhost:3000/api/v1/questoes_mais_acessadas_semana.json
+* localhost:3000/api/v1/questoes_mais_acessadas_mes.json
+* localhost:3000/api/v1/questoes_mais_acessadas_ano.json
 
 ### 2. Ferramentas e tecnologias utilizadas
 
